@@ -1,0 +1,456 @@
+:root {
+  --rosa: #f8d7e6;
+  --rosa-fuerte: #e89ab8;
+  --crema: #fff8f0;
+  --beige: #f4e6d4;
+  --mantequilla: #fff3b0;
+  --celeste: #ddeeff;
+  --texto: #3b2f35;
+  --blanco: #ffffff;
+  --gris: #7a6b72;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(135deg, var(--crema), var(--rosa), var(--celeste));
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar-angelis {
+  background: rgba(255, 248, 240, .94);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 18px rgba(80, 50, 60, .12);
+}
+
+.navbar-brand {
+  color: var(--rosa-fuerte) !important;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--texto) !important;
+  font-weight: 600;
+  margin: 0 6px;
+}
+
+.nav-link:hover {
+  color: var(--rosa-fuerte) !important;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--rosa);
+}
+
+/* BOTONES */
+.btn-angelis {
+  background: linear-gradient(135deg, var(--rosa-fuerte), #f4b6cc);
+  color: white !important;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(232, 154, 184, .35);
+  transition: .3s;
+}
+
+.btn-angelis:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(232, 154, 184, .45);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white !important;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-weight: 700;
+  border: none;
+  transition: .3s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  background: #1fb85a;
+}
+
+/* HERO */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 70px;
+  background:
+    radial-gradient(circle at top left, var(--mantequilla), transparent 35%),
+    radial-gradient(circle at bottom right, var(--celeste), transparent 35%);
+}
+
+.hero-section h1 {
+  color: var(--rosa-fuerte);
+  letter-spacing: 4px;
+}
+
+.hero-section .lead {
+  font-size: 1.18rem;
+  line-height: 1.8;
+}
+
+.badge-soft {
+  background: var(--blanco);
+  color: var(--rosa-fuerte);
+  border: 1px solid var(--rosa);
+  padding: 10px 18px;
+  border-radius: 30px;
+}
+
+/* CARRUSEL */
+.carousel-angelis {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 18px 35px rgba(80, 50, 60, .18);
+}
+
+.carousel-angelis img {
+  height: 430px;
+  object-fit: cover;
+  filter: brightness(.82);
+}
+
+.carousel-caption {
+  background: rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+/* SECCIONES */
+.section-white {
+  background: rgba(255, 255, 255, .68);
+}
+
+.subtitle {
+  color: var(--rosa-fuerte);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: .85rem;
+}
+
+.section-title {
+  color: var(--texto);
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.section-text {
+  color: var(--gris);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.category-title {
+  color: var(--rosa-fuerte);
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+/* TARJETAS DE BENEFICIOS */
+.mini-card {
+  background: white;
+  border-radius: 25px;
+  padding: 28px 15px;
+  box-shadow: 0 10px 25px rgba(80, 50, 60, .1);
+  transition: .3s;
+  height: 100%;
+}
+
+.mini-card:hover {
+  transform: translateY(-8px);
+}
+
+.mini-card i {
+  font-size: 2.4rem;
+  color: var(--rosa-fuerte);
+  margin-bottom: 10px;
+}
+
+.mini-card h5 {
+  font-weight: 800;
+}
+
+.mini-card p {
+  color: var(--gris);
+  margin-bottom: 0;
+}
+
+/* PRODUCTOS */
+.product-card {
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(80, 50, 60, .12);
+  transition: .3s;
+  height: 100%;
+  background: white;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(80, 50, 60, .18);
+}
+
+.product-card img {
+  height: 260px;
+  object-fit: cover;
+  transition: .4s;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card .card-title {
+  color: var(--texto);
+  font-weight: 800;
+}
+
+.product-card .card-text {
+  color: var(--gris);
+  min-height: 48px;
+}
+
+.badge-price {
+  background: var(--mantequilla);
+  color: var(--texto);
+  padding: 9px 13px;
+  border-radius: 20px;
+  font-size: .9rem;
+}
+
+/* PROMOS */
+.promo-card {
+  background: linear-gradient(135deg, var(--rosa), var(--crema));
+  border-radius: 28px;
+  padding: 38px 25px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(80, 50, 60, .12);
+  min-height: 190px;
+  transition: .3s;
+}
+
+.promo-card:hover {
+  transform: translateY(-8px);
+}
+
+.promo-card h3 {
+  color: var(--rosa-fuerte);
+  font-weight: 900;
+}
+
+.promo-card.animal {
+  background:
+    linear-gradient(rgba(255, 248, 240, .88), rgba(248, 215, 230, .88)),
+    repeating-linear-gradient(45deg, #d9b58c 0 10px, #fff8f0 10px 20px);
+}
+
+/* CONJUNTOS */
+.outfit-card {
+  background: white;
+  border-radius: 28px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(80, 50, 60, .12);
+  height: 100%;
+  transition: .3s;
+}
+
+.outfit-card:hover {
+  transform: translateY(-8px);
+}
+
+.outfit-card i {
+  font-size: 2.5rem;
+  color: var(--rosa-fuerte);
+}
+
+.outfit-card h4 {
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.outfit-card p {
+  color: var(--gris);
+}
+
+.outfit-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.outfit-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.outfit-card .btn {
+  margin-top: auto;
+}
+
+.outfit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(80, 50, 60, .18);
+}
+
+/* TARJETAS 3D */
+.card-3d {
+  perspective: 1000px;
+  height: 280px;
+}
+
+.card-3d-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform .8s;
+  transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-3d-inner {
+  transform: rotateY(180deg);
+}
+
+.card-3d-front,
+.card-3d-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  box-shadow: 0 12px 28px rgba(80, 50, 60, .12);
+}
+
+.card-3d-front {
+  background: linear-gradient(135deg, var(--celeste), var(--crema));
+}
+
+.card-3d-front i {
+  font-size: 3rem;
+  color: var(--rosa-fuerte);
+}
+
+.card-3d-back {
+  background: linear-gradient(135deg, var(--rosa-fuerte), #f4b6cc);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.animal-print {
+  background:
+    linear-gradient(rgba(255, 248, 240, .85), rgba(248, 215, 230, .85)),
+    repeating-linear-gradient(45deg, #cfa47c 0 8px, #fff3b0 8px 18px);
+}
+
+/* ACORDEÓN */
+.accordion-angelis .accordion-item {
+  border: none;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(80, 50, 60, .08);
+}
+
+.accordion-button {
+  font-weight: 800;
+  color: var(--texto);
+  background: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--rosa);
+  color: var(--texto);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+/* CONTACTO */
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 28px;
+  box-shadow: 0 12px 28px rgba(80, 50, 60, .12);
+}
+
+.form-control,
+.form-select {
+  border-radius: 18px;
+  padding: 12px 16px;
+  border: 1px solid var(--rosa);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--rosa-fuerte);
+  box-shadow: 0 0 0 .2rem rgba(232, 154, 184, .2);
+}
+
+/* MODAL */
+.modal-angelis {
+  border: none;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: var(--rosa);
+  color: var(--texto);
+}
+
+/* FOOTER */
+.footer-angelis {
+  background: var(--texto);
+  color: white;
+}
+
+.footer-angelis h4 {
+  color: var(--rosa);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.footer-angelis p {
+  color: #f3dfe7;
+}
+
+@media(max-width:768px) {
+  .hero-section {
+    padding-top: 110px;
+    text-align: center;
+  }
+
+  .carousel-angelis img {
+    height: 300px;
+  }
+
+  .product-card img {
+    height: 230px;
+  }
+}
